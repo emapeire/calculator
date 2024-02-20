@@ -1,3 +1,3 @@
 # Calculator App
 
-![calculator-app](https://github.com/emapeire/calculator/assets/63935846/d8f31848-6933-45ff-9b6e-8b0958eef211)
+![calculator-app](https://github.com/emapeire/calculator/assets/63935846/db9dbc70-f9bf-4d00-8f4f-b45c66405ece)
