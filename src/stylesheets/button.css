@@ -1,4 +1,4 @@
-.boton-contenedor {
+.button-container {
   height: 83px;
   display: flex;
   flex: 1 1;
@@ -15,15 +15,15 @@
   user-select: none;
 }
 
-.boton-contenedor:hover {
+.button-container:hover {
   background-color: #5a01a7;
 }
 
-.operador {
+.operator {
   background-color: #00471b;
   color: white;
 }
 
-.operador:hover {
+.operator:hover {
   background-color: #ff6600;
 }

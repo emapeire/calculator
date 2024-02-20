@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.freecodecamp-logo-contenedor {
+.freecodecamp-logo-container {
   width: 100%;
   height: 50px;
   margin: 8px;
@@ -28,7 +28,7 @@
   height: 40px;
 }
 
-.contenedor-calculadora {
+.container-calculator {
   width: 400px;
   height: 600px;
   padding: 14px;
@@ -37,7 +37,7 @@
   border: 5px solid white;
 }
 
-.fila {
+.row {
   margin: 4px;
   display: flex;
   align-items: center;

@@ -1,69 +1,67 @@
-import './App.css';
-import freeCodeCampLogo from './images/freecodecamp-logo.png';
-import Boton from './components/boton';
-import Pantalla from './components/input';
-import BotonClear from './components/boton-clear';
-import { useState } from 'react';
-import { evaluate } from 'mathjs';
+import './App.css'
+import freeCodeCampLogo from './images/freecodecamp-logo.png'
+import Button from './components/button'
+import Screen from './components/input'
+import ButtonClear from './components/button-clear'
+import { useState } from 'react'
+import { evaluate } from 'mathjs'
 
 function App() {
+  const [input, setInput] = useState('')
 
-  const [input, setInput] = useState('');
+  const addInput = (value) => {
+    setInput(input + value)
+  }
 
-  const agregarInput = (valor) => {
-    setInput(input + valor);
-  };
-
-  const calcularResultado = () => {
-    if(input) {
-      setInput(evaluate(input));
+  const calculateResult = () => {
+    if (input) {
+      setInput(evaluate(input))
     } else {
-      alert("Ingrese un valor calculable");
+      alert('Add an input first')
     }
-  };
+  }
 
   return (
-    <div className="App">
-      <div className='freecodecamp-logo-contenedor'>
-        <img 
-          src={ freeCodeCampLogo }
+    <div className='App'>
+      <div className='freecodecamp-logo-container'>
+        <img
+          src={freeCodeCampLogo}
           className='freecodecamp-logo'
-          alt='freecodecamp-logo' />
+          alt='freecodecamp-logo'
+        />
       </div>
-      <div className='contenedor-calculadora'>
-        <Pantalla input={input} />
-        <div className='fila'>
-          <Boton manejarClick={agregarInput}>1</Boton>
-          <Boton manejarClick={agregarInput}>2</Boton>
-          <Boton manejarClick={agregarInput}>3</Boton>
-          <Boton manejarClick={agregarInput}>+</Boton>
+      <div className='container-calculator'>
+        <Screen input={input} />
+        <div className='row'>
+          <Button handleClick={addInput}>1</Button>
+          <Button handleClick={addInput}>2</Button>
+          <Button handleClick={addInput}>3</Button>
+          <Button handleClick={addInput}>+</Button>
         </div>
-        <div className='fila'>
-          <Boton manejarClick={agregarInput}>4</Boton>
-          <Boton manejarClick={agregarInput}>5</Boton>
-          <Boton manejarClick={agregarInput}>6</Boton>
-          <Boton manejarClick={agregarInput}>-</Boton>
+        <div className='row'>
+          <Button handleClick={addInput}>4</Button>
+          <Button handleClick={addInput}>5</Button>
+          <Button handleClick={addInput}>6</Button>
+          <Button handleClick={addInput}>-</Button>
         </div>
-        <div className='fila'>
-          <Boton manejarClick={agregarInput}>7</Boton>
-          <Boton manejarClick={agregarInput}>8</Boton>
-          <Boton manejarClick={agregarInput}>9</Boton>
-          <Boton manejarClick={agregarInput}>*</Boton>
+        <div className='row'>
+          <Button handleClick={addInput}>7</Button>
+          <Button handleClick={addInput}>8</Button>
+          <Button handleClick={addInput}>9</Button>
+          <Button handleClick={addInput}>*</Button>
         </div>
-        <div className='fila'>
-          <Boton manejarClick={calcularResultado}>=</Boton>
-          <Boton manejarClick={agregarInput}>0</Boton>
-          <Boton manejarClick={agregarInput}>.</Boton>
-          <Boton manejarClick={agregarInput}>/</Boton>
+        <div className='row'>
+          <Button handleClick={calculateResult}>=</Button>
+          <Button handleClick={addInput}>0</Button>
+          <Button handleClick={addInput}>.</Button>
+          <Button handleClick={addInput}>/</Button>
         </div>
-        <div className='fila'>
-          <BotonClear manejarClear={() => setInput("")}>
-            Clear
-          </BotonClear>
+        <div className='row'>
+          <ButtonClear handleClear={() => setInput('')}>Clear</ButtonClear>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,4 +1,4 @@
-.boton-clear {
+.button-clear {
   height: 80px;
   font-size: 1.6em;
   display: flex;
@@ -14,6 +14,6 @@
   cursor: pointer;
 }
 
-.boton-clear:hover {
+.button-clear:hover {
   background-color: #ebb000;
 }
